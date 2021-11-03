@@ -1,22 +1,19 @@
-let names = ["Lisa", "Kaitlin", "Jan"];
-const event = "surprise";
-let newArray = []
+const names = ["Lisa", "Kaitlin", "Jan"];
 
-function writeCards(names, event) {
+function writeCards(names, event = "surprise") {
 
-    for (let i = 0; i < 3; i++) {
-        newArray.push(`Thank you, ${names[i]}, for the wonderful ${event} gift!`)
+    let newNames = []
+
+    for (let i = 0; i < names.length; i++) {
+        newNames.push(`Thank you, ${names[i]}, for the wonderful ${event} gift!`);
     }
 
-    return newArray;
-
+    return newNames;
 }
 
-let number = 10;
-
 function countDown(number) {
+
     while (number >= 0) {
-        console.log(number);
-        number--;
+        console.log(number--);
     }
 }
